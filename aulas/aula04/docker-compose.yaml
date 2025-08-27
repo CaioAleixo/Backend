@@ -1,0 +1,9 @@
+services:
+  app:
+    image: node:21
+    ports: 
+      - 3000:3000
+    volumes: 
+      - .:/app
+    tty: true
+    stdin_open: true

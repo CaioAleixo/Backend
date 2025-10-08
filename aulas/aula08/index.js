@@ -64,10 +64,13 @@ async function main () {
             }
 
             case 3: {
-                const nome = readline.question("Informe o nome da tarefa: ");
-                await alterar(nome);
+                const nomeBusca = readline.question("Informe o nome da tarefa: ");
+                const nome = readline.question("Informe outro nome para a tarefa: ");
+                const concluida = readline.question("Informe outra situacao para a tarefa: ");
+                await alterar(nomeBusca, nome, concluida);
                 break;
             }
+
             case 4: {
                 const nome = readline.question("Informe o nome da tarefa: ");
                 await remover(nome);
